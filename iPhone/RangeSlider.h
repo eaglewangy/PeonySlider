@@ -6,6 +6,7 @@
 //  Copyright 2010 Natural Guides, LLC. All rights reserved.
 //
 
+#import "ANPopoverView.h"
 #import <UIKit/UIKit.h>
 
 
@@ -18,7 +19,11 @@
 	UIView *trackingSlider; // a variable to keep track of which slider we are tracking (if either)
 }
 
-@property (nonatomic) CGFloat min, max, minimumRangeLength;
+@property (nonatomic) CGFloat min, max, minimumRangeLength, currenctValue;
+@property (strong, nonatomic) ANPopoverView *popupView;
+
+@property (nonatomic, readonly) CGRect thumbRect;
+
 - (void)setMinThumbImage:(UIImage *)image;
 - (void)setMaxThumbImage:(UIImage *)image;
 - (void)setTrackImage:(UIImage *)image;
