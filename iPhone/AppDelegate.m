@@ -1,60 +1,19 @@
 //
-//  AppDelegate_iPhone.m
-//  RangeSlider
-//
 //  Created by Charlie Mezak on 9/16/10.
 //  Copyright 2010 Natural Guides, LLC. All rights reserved.
 //
 
-#import "AppDelegate_iPhone.h"
-#import "RangeSlider.h"
+#import "AppDelegate.h"
 
-@implementation AppDelegate_iPhone
+@implementation AppDelegate
 
 @synthesize window;
-
 
 #pragma mark -
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-    	
-	slider = [[RangeSlider alloc] initWithFrame:CGRectMake(10, 100, 300, 30)]; // the slider enforces a height of 30, although I'm not sure that this is necessary
-	
-	slider.minimumRangeLength = .03; // this property enforces a minimum range size. By default it is set to 0.0
-	
-	[slider setMinThumbImage:[UIImage imageNamed:@"rangethumb.png"]]; // the two thumb controls are given custom images
-	[slider setMaxThumbImage:[UIImage imageNamed:@"rangethumb.png"]];
-	
-	
-	UIImage *image; // there are two track images, one for the range "track", and one for the filled in region of the track between the slider thumbs
-	
-	[slider setTrackImage:[[UIImage imageNamed:@"fullrange.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(9.0, 9.0, 9.0, 9.0)]];
-	
-	image = [UIImage imageNamed:@"fillrange.png"];
-	[slider setInRangeTrackImage:image];
-
-	
-	[slider addTarget:self action:@selector(report:) forControlEvents:UIControlEventValueChanged]; // The slider sends actions when the value of the minimum or maximum changes
-	
-	
-	reportLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 30, 310, 30)]; // a label to see the values of the slider in this demo
-	reportLabel.adjustsFontSizeToFitWidth = YES;
-	reportLabel.textAlignment = NSTextAlignmentCenter;
-	[window addSubview:reportLabel];
-	NSString *report = [NSString stringWithFormat:@"current slider range is %f to %f", slider.min, slider.max];
-	reportLabel.text = report;
-	
-    [window addSubview:slider];
-    [window makeKeyAndVisible];
-    
     return YES;
-}
-
-- (void)report:(RangeSlider *)sender {
-	NSString *report = [NSString stringWithFormat:@"current slider range is %f to %f", sender.min, sender.max];
-	reportLabel.text = report;
-	NSLog(@"%@",report);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -103,12 +62,5 @@
      Free up as much memory as possible by purging cached data objects that can be recreated (or reloaded from disk) later.
      */
 }
-
-
-- (void)dealloc {
-    [window release];
-    [super dealloc];
-}
-
 
 @end

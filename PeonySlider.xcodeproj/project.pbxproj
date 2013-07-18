@@ -10,14 +10,11 @@
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		23F20A6D17975B0600726E7E /* ANPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F20A6C17975B0600726E7E /* ANPopoverView.m */; };
-		2860E328111B887F00E27156 /* AppDelegate_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 2860E326111B887F00E27156 /* AppDelegate_iPhone.m */; };
-		2860E329111B887F00E27156 /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2860E327111B887F00E27156 /* MainWindow_iPhone.xib */; };
-		2860E32E111B888700E27156 /* AppDelegate_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 2860E32C111B888700E27156 /* AppDelegate_iPad.m */; };
-		2860E32F111B888700E27156 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2860E32D111B888700E27156 /* MainWindow_iPad.xib */; };
+		2860E328111B887F00E27156 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2860E326111B887F00E27156 /* AppDelegate.m */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
-		899E8854130C39BC00F0E7D8 /* RangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 899E8853130C39BC00F0E7D8 /* RangeSlider.m */; };
-		982F67DF1797805000A8EB83 /* sliderlabel.png in Resources */ = {isa = PBXBuildFile; fileRef = 982F67DE1797805000A8EB83 /* sliderlabel.png */; };
+		899E8854130C39BC00F0E7D8 /* PeonySlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 899E8853130C39BC00F0E7D8 /* PeonySlider.m */; };
+		982F67E41797EB1200A8EB83 /* PeonySlider.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 982F67E31797EB1200A8EB83 /* PeonySlider.storyboard */; };
+		982F67E71797EBAB00A8EB83 /* PeonyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 982F67E61797EBAB00A8EB83 /* PeonyViewController.m */; };
 		FAA0016E16E19A1E00260842 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA0016D16E19A1E00260842 /* Default-568h@2x.png */; };
 		FAA0017216E1A38900260842 /* fillrange.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA0016F16E1A38900260842 /* fillrange.png */; };
 		FAA0017316E1A38900260842 /* fullrange.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA0017016E1A38900260842 /* fullrange.png */; };
@@ -28,21 +25,17 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* PeonySlider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeonySlider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		23F20A6B17975B0600726E7E /* ANPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANPopoverView.h; sourceTree = "<group>"; };
-		23F20A6C17975B0600726E7E /* ANPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANPopoverView.m; sourceTree = "<group>"; };
-		2860E325111B887F00E27156 /* AppDelegate_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate_iPhone.h; sourceTree = "<group>"; };
-		2860E326111B887F00E27156 /* AppDelegate_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate_iPhone.m; sourceTree = "<group>"; };
-		2860E327111B887F00E27156 /* MainWindow_iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow_iPhone.xib; sourceTree = "<group>"; };
-		2860E32B111B888700E27156 /* AppDelegate_iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate_iPad.h; sourceTree = "<group>"; };
-		2860E32C111B888700E27156 /* AppDelegate_iPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate_iPad.m; sourceTree = "<group>"; };
-		2860E32D111B888700E27156 /* MainWindow_iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow_iPad.xib; sourceTree = "<group>"; };
+		2860E325111B887F00E27156 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2860E326111B887F00E27156 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Shared/main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* PeonySlider_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeonySlider_Prefix.pch; sourceTree = "<group>"; };
-		899E8852130C39BC00F0E7D8 /* RangeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RangeSlider.h; sourceTree = "<group>"; };
-		899E8853130C39BC00F0E7D8 /* RangeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RangeSlider.m; sourceTree = "<group>"; };
+		899E8852130C39BC00F0E7D8 /* PeonySlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeonySlider.h; sourceTree = "<group>"; };
+		899E8853130C39BC00F0E7D8 /* PeonySlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeonySlider.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* PeonySlider-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PeonySlider-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		982F67DE1797805000A8EB83 /* sliderlabel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderlabel.png; sourceTree = "<group>"; };
+		982F67E31797EB1200A8EB83 /* PeonySlider.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PeonySlider.storyboard; sourceTree = "<group>"; };
+		982F67E51797EBAB00A8EB83 /* PeonyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeonyViewController.h; sourceTree = "<group>"; };
+		982F67E61797EBAB00A8EB83 /* PeonyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeonyViewController.m; sourceTree = "<group>"; };
 		FAA0016D16E19A1E00260842 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FAA0016F16E1A38900260842 /* fillrange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fillrange.png; sourceTree = "<group>"; };
 		FAA0017016E1A38900260842 /* fullrange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fullrange.png; sourceTree = "<group>"; };
@@ -74,29 +67,18 @@
 		2860E324111B887F00E27156 /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
-				982F67DE1797805000A8EB83 /* sliderlabel.png */,
-				23F20A6B17975B0600726E7E /* ANPopoverView.h */,
-				23F20A6C17975B0600726E7E /* ANPopoverView.m */,
-				2860E325111B887F00E27156 /* AppDelegate_iPhone.h */,
-				2860E326111B887F00E27156 /* AppDelegate_iPhone.m */,
+				2860E325111B887F00E27156 /* AppDelegate.h */,
+				2860E326111B887F00E27156 /* AppDelegate.m */,
+				982F67E51797EBAB00A8EB83 /* PeonyViewController.h */,
+				982F67E61797EBAB00A8EB83 /* PeonyViewController.m */,
+				982F67E31797EB1200A8EB83 /* PeonySlider.storyboard */,
 				FAA0016F16E1A38900260842 /* fillrange.png */,
 				FAA0017016E1A38900260842 /* fullrange.png */,
 				FAA0017116E1A38900260842 /* rangethumb.png */,
-				899E8852130C39BC00F0E7D8 /* RangeSlider.h */,
-				899E8853130C39BC00F0E7D8 /* RangeSlider.m */,
-				2860E327111B887F00E27156 /* MainWindow_iPhone.xib */,
+				899E8852130C39BC00F0E7D8 /* PeonySlider.h */,
+				899E8853130C39BC00F0E7D8 /* PeonySlider.m */,
 			);
 			path = iPhone;
-			sourceTree = "<group>";
-		};
-		2860E32A111B888700E27156 /* iPad */ = {
-			isa = PBXGroup;
-			children = (
-				2860E32B111B888700E27156 /* AppDelegate_iPad.h */,
-				2860E32C111B888700E27156 /* AppDelegate_iPad.m */,
-				2860E32D111B888700E27156 /* MainWindow_iPad.xib */,
-			);
-			path = iPad;
 			sourceTree = "<group>";
 		};
 		28EEBF621118D79A00187D67 /* Shared */ = {
@@ -111,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				FAA0016D16E19A1E00260842 /* Default-568h@2x.png */,
-				2860E32A111B888700E27156 /* iPad */,
 				2860E324111B887F00E27156 /* iPhone */,
 				28EEBF621118D79A00187D67 /* Shared */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -189,13 +170,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2860E329111B887F00E27156 /* MainWindow_iPhone.xib in Resources */,
-				2860E32F111B888700E27156 /* MainWindow_iPad.xib in Resources */,
 				FAA0016E16E19A1E00260842 /* Default-568h@2x.png in Resources */,
 				FAA0017216E1A38900260842 /* fillrange.png in Resources */,
 				FAA0017316E1A38900260842 /* fullrange.png in Resources */,
 				FAA0017416E1A38900260842 /* rangethumb.png in Resources */,
-				982F67DF1797805000A8EB83 /* sliderlabel.png in Resources */,
+				982F67E41797EB1200A8EB83 /* PeonySlider.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,10 +186,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
-				2860E328111B887F00E27156 /* AppDelegate_iPhone.m in Sources */,
-				2860E32E111B888700E27156 /* AppDelegate_iPad.m in Sources */,
-				899E8854130C39BC00F0E7D8 /* RangeSlider.m in Sources */,
-				23F20A6D17975B0600726E7E /* ANPopoverView.m in Sources */,
+				2860E328111B887F00E27156 /* AppDelegate.m in Sources */,
+				899E8854130C39BC00F0E7D8 /* PeonySlider.m in Sources */,
+				982F67E71797EBAB00A8EB83 /* PeonyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +199,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -237,6 +216,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = PeonySlider_Prefix.pch;
@@ -252,6 +232,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -267,6 +248,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
