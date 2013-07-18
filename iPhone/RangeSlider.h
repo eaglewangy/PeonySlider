@@ -19,10 +19,9 @@
 	UIView *trackingSlider; // a variable to keep track of which slider we are tracking (if either)
 }
 
-@property (nonatomic) CGFloat min, max, minimumRangeLength, currenctValue;
-@property (strong, nonatomic) ANPopoverView *popupView;
-
-@property (nonatomic, readonly) CGRect thumbRect;
+@property (nonatomic) CGFloat min, max, minimumRangeLength;
+@property (strong, nonatomic) ANPopoverView *minPopview;
+@property (strong, nonatomic) ANPopoverView *maxPopview;
 
 - (void)setMinThumbImage:(UIImage *)image;
 - (void)setMaxThumbImage:(UIImage *)image;

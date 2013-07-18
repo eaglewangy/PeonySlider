@@ -17,6 +17,7 @@
 		2860E32F111B888700E27156 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2860E32D111B888700E27156 /* MainWindow_iPad.xib */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		899E8854130C39BC00F0E7D8 /* RangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 899E8853130C39BC00F0E7D8 /* RangeSlider.m */; };
+		982F67DF1797805000A8EB83 /* sliderlabel.png in Resources */ = {isa = PBXBuildFile; fileRef = 982F67DE1797805000A8EB83 /* sliderlabel.png */; };
 		FAA0016E16E19A1E00260842 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA0016D16E19A1E00260842 /* Default-568h@2x.png */; };
 		FAA0017216E1A38900260842 /* fillrange.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA0016F16E1A38900260842 /* fillrange.png */; };
 		FAA0017316E1A38900260842 /* fullrange.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA0017016E1A38900260842 /* fullrange.png */; };
@@ -25,7 +26,7 @@
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1D6058910D05DD3D006BFB54 /* RangeSlider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RangeSlider.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* PeonySlider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeonySlider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		23F20A6B17975B0600726E7E /* ANPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANPopoverView.h; sourceTree = "<group>"; };
 		23F20A6C17975B0600726E7E /* ANPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANPopoverView.m; sourceTree = "<group>"; };
@@ -37,10 +38,11 @@
 		2860E32D111B888700E27156 /* MainWindow_iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow_iPad.xib; sourceTree = "<group>"; };
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Shared/main.m; sourceTree = "<group>"; };
-		32CA4F630368D1EE00C91783 /* RangeSlider_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RangeSlider_Prefix.pch; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* PeonySlider_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeonySlider_Prefix.pch; sourceTree = "<group>"; };
 		899E8852130C39BC00F0E7D8 /* RangeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RangeSlider.h; sourceTree = "<group>"; };
 		899E8853130C39BC00F0E7D8 /* RangeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RangeSlider.m; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* RangeSlider-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RangeSlider-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* PeonySlider-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PeonySlider-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		982F67DE1797805000A8EB83 /* sliderlabel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderlabel.png; sourceTree = "<group>"; };
 		FAA0016D16E19A1E00260842 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FAA0016F16E1A38900260842 /* fillrange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fillrange.png; sourceTree = "<group>"; };
 		FAA0017016E1A38900260842 /* fullrange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fullrange.png; sourceTree = "<group>"; };
@@ -64,7 +66,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* RangeSlider.app */,
+				1D6058910D05DD3D006BFB54 /* PeonySlider.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +74,7 @@
 		2860E324111B887F00E27156 /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				982F67DE1797805000A8EB83 /* sliderlabel.png */,
 				23F20A6B17975B0600726E7E /* ANPopoverView.h */,
 				23F20A6C17975B0600726E7E /* ANPopoverView.m */,
 				2860E325111B887F00E27156 /* AppDelegate_iPhone.h */,
@@ -99,7 +102,7 @@
 		28EEBF621118D79A00187D67 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				8D1107310486CEB800E47090 /* RangeSlider-Info.plist */,
+				8D1107310486CEB800E47090 /* PeonySlider-Info.plist */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -121,7 +124,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				32CA4F630368D1EE00C91783 /* RangeSlider_Prefix.pch */,
+				32CA4F630368D1EE00C91783 /* PeonySlider_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
@@ -140,9 +143,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* RangeSlider */ = {
+		1D6058900D05DD3D006BFB54 /* PeonySlider */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "RangeSlider" */;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "PeonySlider" */;
 			buildPhases = (
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
@@ -152,9 +155,9 @@
 			);
 			dependencies = (
 			);
-			name = RangeSlider;
+			name = PeonySlider;
 			productName = RangeSlider;
-			productReference = 1D6058910D05DD3D006BFB54 /* RangeSlider.app */;
+			productReference = 1D6058910D05DD3D006BFB54 /* PeonySlider.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -162,7 +165,7 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "RangeSlider" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "PeonySlider" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -176,7 +179,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* RangeSlider */,
+				1D6058900D05DD3D006BFB54 /* PeonySlider */,
 			);
 		};
 /* End PBXProject section */
@@ -192,6 +195,7 @@
 				FAA0017216E1A38900260842 /* fillrange.png in Resources */,
 				FAA0017316E1A38900260842 /* fullrange.png in Resources */,
 				FAA0017416E1A38900260842 /* rangethumb.png in Resources */,
+				982F67DF1797805000A8EB83 /* sliderlabel.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,10 +225,10 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = RangeSlider_Prefix.pch;
-				INFOPLIST_FILE = "RangeSlider-Info.plist";
+				GCC_PREFIX_HEADER = PeonySlider_Prefix.pch;
+				INFOPLIST_FILE = "PeonySlider-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = RangeSlider;
+				PRODUCT_NAME = PeonySlider;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -235,10 +239,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = RangeSlider_Prefix.pch;
-				INFOPLIST_FILE = "RangeSlider-Info.plist";
+				GCC_PREFIX_HEADER = PeonySlider_Prefix.pch;
+				INFOPLIST_FILE = "PeonySlider-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = RangeSlider;
+				PRODUCT_NAME = PeonySlider;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -278,7 +282,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "RangeSlider" */ = {
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "PeonySlider" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
@@ -287,7 +291,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "RangeSlider" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "PeonySlider" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,

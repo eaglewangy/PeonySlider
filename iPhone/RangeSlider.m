@@ -50,9 +50,6 @@
 		[self updateTrackImageViews];
         
         [self constructSlider];
-        
-        [self addTarget:self action:@selector(valueChanged:) forControlEvents:UIControlEventValueChanged];
-		
 	}
     return self;
 }
@@ -69,7 +66,6 @@
 	
 	[self addSubview:minSlider];
 	[self addSubview:maxSlider];
-	
 }
 
 - (void)setMinThumbImage:(UIImage *)image {
@@ -101,8 +97,12 @@
 	
 	if (CGRectContainsPoint(minSlider.frame, [touch locationInView:self])) { //if touch is beginning on min slider
 		trackingSlider = minSlider;
+        [self positionAndUpdatePopupView];
+        [self fadePopupViewInAndOut:YES];
 	} else if (CGRectContainsPoint(maxSlider.frame, [touch locationInView:self])) { //if touch is beginning on max slider
 		trackingSlider = maxSlider;
+        [self positionAndUpdatePopupView];
+        [self fadePopupViewInAndOut:YES];
 	}
 }
 
@@ -169,7 +169,6 @@
 }
 
 - (void)updateTrackImageViews {
-
 	inRangeTrackImageView.frame = CGRectMake(minSlider.frame.origin.x+0.5*self.frame.size.height,
 											 inRangeTrackImageView.frame.origin.y,
 											 maxSlider.frame.origin.x-minSlider.frame.origin.x,
@@ -209,8 +208,7 @@
 	[self updateTrackImageViews];
 }
 
-- (void)updateThumbViews {
-	
+- (void)updateThumbViews {    
 	maxSlider.frame = CGRectMake(max*(self.frame.size.width-2*self.frame.size.height)+self.frame.size.height, 
 								 (SLIDER_HEIGHT-self.frame.size.height)/2.0, 
 								 self.frame.size.height, 
@@ -232,6 +230,7 @@
 	trackingSlider = nil; //we are no longer tracking either slider
 }
 
+/*/
 #pragma mark - UIControl touch event tracking
 -(BOOL)beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {
     // Fade in and update the popup view
@@ -245,6 +244,7 @@
     
     return [super beginTrackingWithTouch:touch withEvent:event];
 }
+ */
 
 -(BOOL)continueTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {
     // Update the popup view as slider knob is being moved
@@ -258,45 +258,74 @@
 
 -(void)endTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {
     // Fade out the popup view
-    [self fadePopupViewInAndOut:NO];
+    //[self fadePopupViewInAndOut:NO];
     [super endTrackingWithTouch:touch withEvent:event];
 }
 
 
 #pragma mark - Helper methods
 -(void)constructSlider {
-    _popupView = [[ANPopoverView alloc] initWithFrame:CGRectZero];
-    _popupView.backgroundColor = [UIColor clearColor];
-    _popupView.alpha = 0.0;
-    [self addSubview:_popupView];
+    _minPopview = [[ANPopoverView alloc] initWithFrame:CGRectZero];
+    _minPopview.backgroundColor = [UIColor clearColor];
+    _minPopview.alpha =1.0;
+    [self addSubview:_minPopview];
+    
+    _maxPopview = [[ANPopoverView alloc] initWithFrame:CGRectZero];
+    _maxPopview.backgroundColor = [UIColor clearColor];
+    _maxPopview.alpha = 1.0;
+    [self addSubview:_maxPopview];
+    
+    [self positionAndUpdatePopupView:TRUE];
 }
 
 -(void)fadePopupViewInAndOut:(BOOL)aFadeIn {
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.5];
     if (aFadeIn) {
-        _popupView.alpha = 1.0;
+        _minPopview.alpha = 1.0;
+        _maxPopview.alpha = 1.0;
     } else {
-        _popupView.alpha = 0.0;
+        _minPopview.alpha = 0.0;
+        _maxPopview.alpha = 0.0;
     }
     [UIView commitAnimations];
 }
 
+-(void)positionAndUpdatePopupView:(BOOL)updateBoth
+{
+    if (updateBoth){
+        [self updateLeftPopupViewPosition];
+        [self updateRightPopupViewPosition];
+    }else{
+        [self positionAndUpdatePopupView];
+    }
+}
+
 -(void)positionAndUpdatePopupView {
-    CGRect zeThumbRect = self.thumbRect;
+    if (trackingSlider == minSlider){
+        [self updateLeftPopupViewPosition];
+    }else if (trackingSlider == maxSlider){
+        [self updateRightPopupViewPosition];
+    }
+}
+
+-(void)updateLeftPopupViewPosition
+{
+    CGRect zeThumbRect = minSlider.frame;
     CGRect popupRect = CGRectOffset(zeThumbRect, 0, -floor(zeThumbRect.size.height * 1.5));
-    _popupView.frame = CGRectInset(popupRect, -20, -10);
-    _popupView.value = self.currenctValue;
+    _minPopview.frame = CGRectInset(popupRect, -20, -10);
+    _minPopview.value = min;
 }
 
-
-#pragma mark - Property accessors
--(CGRect)thumbRect {
-    CGRect trackRect = inRangeTrackImageView.bounds;
-    CGRect thumbR = [self thumbRectForBounds:self.bounds trackRect:trackRect value:self.currenctValue];
-    return thumbR;
+-(void)updateRightPopupViewPosition
+{
+    CGRect maxRect = maxSlider.frame;
+    CGRect maxPopupRect = CGRectOffset(maxRect, 0, -floor(maxRect.size.height * 1.5));
+    _maxPopview.frame = CGRectInset(maxPopupRect, -20, -10);
+    _maxPopview.value = max;
 }
 
+/*
 -(void)valueChanged:(id)sender
 {
     if (trackingSlider == minSlider){
@@ -305,6 +334,7 @@
         self.currenctValue = max;
     }
 }
+ */
 
 
 /*
