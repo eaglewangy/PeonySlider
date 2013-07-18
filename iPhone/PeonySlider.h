@@ -14,6 +14,7 @@
 	UIImageView *minSlider, *maxSlider, *backgroundImageView, *trackImageView, *inRangeTrackImageView; // the sliders representing the min and max, and a background view;
 	UIView *trackingSlider; // a variable to keep track of which slider we are tracking (if either)
     int scale;
+    NSString *popupViewPrefix;
 }
 
 @property (nonatomic) CGFloat min, max, minimumRangeLength;
@@ -24,6 +25,7 @@
 - (void)setMaxThumbImage:(UIImage *)image;
 - (void)setTrackImage:(UIImage *)image;
 - (void)setInRangeTrackImage:(UIImage *)image;
--(void)setScaleFactor:(int)scaleFactor;
+- (void)setScaleFactor:(int)scaleFactor;
+- (void)setPopupViewPrefix:(NSString*)prefix;
 
 @end

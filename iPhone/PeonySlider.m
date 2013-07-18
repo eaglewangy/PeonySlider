@@ -7,6 +7,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 #define SLIDER_HEIGHT 30
+#define MIN_MAX_DISRANCE 45
 
 @interface PeonySlider ()
 
@@ -29,7 +30,7 @@
 		min = 0.0;
 		max = 1.0;
 		minimumRangeLength = 0.0;
-        self.scaleFactor = 100;
+        popupViewPrefix = @"";
 				
 		backgroundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, SLIDER_HEIGHT)];
 		backgroundImageView.contentMode = UIViewContentModeScaleToFill;
@@ -125,10 +126,11 @@
                                 minSlider.frame.origin.x + deltaX,
 							    self.frame.size.width - self.frame.size.height * 2.0 - minimumRangeLength*(self.frame.size.width - self.frame.size.height * 2.0))
                         );
+        
+        //NSLog(@"%f, %f", newX, maxSlider.frame.origin.x);
         //use to limit minSlider not affect maxSlider
-		if ((maxSlider.frame.origin.x - newX) < 40)
+		if ((maxSlider.frame.origin.x - newX) < MIN_MAX_DISRANCE)
         {
-            //NSLog(@"%f, %f", newX, maxSlider.frame.origin.x);
             return;
         }
     
@@ -151,10 +153,10 @@
 						 MIN(maxSlider.frame.origin.x+deltaX, self.frame.size.width - self.frame.size.height)
                         );
 		
+        //NSLog(@"%f, %f", newX, maxSlider.frame.origin.x);
         //use to limit maxSlider not affect minSlider
-		if ((newX - minSlider.frame.origin.x) < 40)
+		if ((newX - minSlider.frame.origin.x) < MIN_MAX_DISRANCE)
         {
-            NSLog(@"%f, %f", newX, maxSlider.frame.origin.x);
             return;
         }
         
@@ -278,12 +280,13 @@
 #pragma mark - Helper methods
 -(void)constructSlider
 {
-    _minPopview = [[UILabel alloc] initWithFrame:CGRectZero];
+    int popupViewWidth = 60;
+    _minPopview = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, popupViewWidth, 30)];
     _minPopview.backgroundColor = [UIColor clearColor];
     _minPopview.alpha = 1.0;
     [self addSubview:_minPopview];
     
-    _maxPopview = [[UILabel alloc] initWithFrame:CGRectZero];
+    _maxPopview = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, popupViewWidth, 30)];
     _maxPopview.backgroundColor = [UIColor clearColor];
     _maxPopview.alpha = 1.0;
     [self addSubview:_maxPopview];
@@ -337,22 +340,32 @@
 {
     CGRect minRect = minSlider.frame;
     CGRect minPopupRect = CGRectOffset(minRect, 0, -floor(minRect.size.height));
-    _minPopview.frame = CGRectInset(minPopupRect, -0, -10);
-    _minPopview.text = [[NSNumber numberWithInt:(int)(min * scale)] stringValue];
+    _minPopview.frame = CGRectInset(minPopupRect, -10, -10);
+    NSString *number = [[NSNumber numberWithInt:(int)(min * scale)] stringValue];
+    NSString *value = [popupViewPrefix stringByAppendingString:number];
+    _minPopview.text = value;
+    NSLog(@"%@, %@", popupViewPrefix, number);
 }
 
 -(void)updateRightPopupViewPosition
 {
     CGRect maxRect = maxSlider.frame;
     CGRect maxPopupRect = CGRectOffset(maxRect, 0, -floor(maxRect.size.height));
-    _maxPopview.frame = CGRectInset(maxPopupRect, -0, -10);
-    _maxPopview.text = [[NSNumber numberWithFloat:(int)(max * scale)] stringValue];
+    _maxPopview.frame = CGRectInset(maxPopupRect, -10, -10);
+    NSString *number = [[NSNumber numberWithFloat:(int)(max * scale)] stringValue];
+    NSString *value = [popupViewPrefix stringByAppendingString:number];
+    _maxPopview.text = value;
 }
 
 -(void)setScaleFactor:(int)scaleFactor
 {
     scale = scaleFactor;
     [self positionAndUpdatePopupView:TRUE];
+}
+
+- (void)setPopupViewPrefix:(NSString*)prefix
+{
+    popupViewPrefix = prefix;
 }
 
 @end
