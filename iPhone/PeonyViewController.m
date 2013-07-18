@@ -43,6 +43,8 @@
 	[slider setInRangeTrackImage:image];
     
 	[slider setScaleFactor:10000];
+    [slider setMin:0.25];
+    [slider setMax:0.75];
     [slider setPopupViewPrefix:@"¥"];
 	[slider addTarget:self action:@selector(report:) forControlEvents:UIControlEventValueChanged]; // The slider sends actions when the value of the minimum or maximum changes
 	

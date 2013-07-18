@@ -188,7 +188,7 @@
 	min = MIN(1.0, MAX(0, newMin)); //value must be between 0 and 1
 	[self updateThumbViews];
 	[self updateTrackImageViews];
-    [self positionAndUpdatePopupView:TRUE];
+    [self sendActionsForControlEvents:UIControlEventValueChanged];
 }
 
 - (void)setMax:(CGFloat)newMax
@@ -196,7 +196,7 @@
 	max = MIN(1.0, MAX(0, newMax)); //value must be between 0 and 1
 	[self updateThumbViews];
 	[self updateTrackImageViews];
-    [self positionAndUpdatePopupView:TRUE];
+    [self sendActionsForControlEvents:UIControlEventValueChanged];
 }
 
 - (void)calculateMinMax
