@@ -346,7 +346,6 @@
     NSString *number = [[NSNumber numberWithInt:(int)(min * scale)] stringValue];
     NSString *value = [popupViewPrefix stringByAppendingString:number];
     _minPopview.text = value;
-    NSLog(@"%@, %@", popupViewPrefix, number);
 }
 
 -(void)updateRightPopupViewPosition
