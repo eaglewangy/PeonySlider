@@ -366,6 +366,7 @@
 - (void)setPopupViewPrefix:(NSString*)prefix
 {
     popupViewPrefix = prefix;
+    [self positionAndUpdatePopupView:TRUE];
 }
 
 @end
