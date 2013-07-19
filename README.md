@@ -3,6 +3,6 @@ PeonySlider
 
 iOS custom UISlider with two values and popover value tracking
 
-![alt tag](http://s11.sinaimg.cn/mw690/6453bedege1c95a94522a&690)
+![alt tag](http://s12.sinaimg.cn/mw690/6453bedege1d34b2145cb&690)
 
-![alt tag](http://s3.sinaimg.cn/mw690/6453bedege1c95b064572&690)
+![alt tag](http://s4.sinaimg.cn/mw690/6453bedege1d34b6944f3&690)
