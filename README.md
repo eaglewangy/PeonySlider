@@ -1,7 +1,8 @@
 PeonySlider
 ===========
 
-iOS custom UISlider with two values and popover value tracking
+iOS custom UISlider with two values and popover value tracking.
+Reference from https://github.com/cmezak/CMRangeSlider
 
 ![alt tag](http://s12.sinaimg.cn/mw690/6453bedege1d34b2145cb&690)
 
